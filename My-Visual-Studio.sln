@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CShart Test", "CShart Test\CShart Test.csproj", "{7ED82971-214C-431E-90DC-7989B998508D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp", "CSharp", "{C076A47B-515D-4616-880E-53D8F0DF4326}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegate_Example", "CSharp\Delegate_Example\Delegate_Example.csproj", "{DC1D197E-2694-4B0C-9757-610EB0E38DDC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7ED82971-214C-431E-90DC-7989B998508D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ED82971-214C-431E-90DC-7989B998508D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ED82971-214C-431E-90DC-7989B998508D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ED82971-214C-431E-90DC-7989B998508D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1D197E-2694-4B0C-9757-610EB0E38DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1D197E-2694-4B0C-9757-610EB0E38DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1D197E-2694-4B0C-9757-610EB0E38DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1D197E-2694-4B0C-9757-610EB0E38DDC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DC1D197E-2694-4B0C-9757-610EB0E38DDC} = {C076A47B-515D-4616-880E-53D8F0DF4326}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F74769B-8464-4D2A-A5EA-73A688B1B725}
+	EndGlobalSection
+EndGlobal

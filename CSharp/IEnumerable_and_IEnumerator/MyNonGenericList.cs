@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections;
 
 namespace IEnumerable_and_IEnumerator
 {
@@ -24,16 +19,31 @@ namespace IEnumerable_and_IEnumerator
             // Initializing our collection
             for (int i = 0; i < noOfObjects; i++)
             {
-                _objects[i] = i*2;
+                _objects[i] = i * 2;
 
             }
         }
 
-        // We need to provide implementation of GetEnumerator() method of IEnumerable interface
-        public IEnumerator GetEnumerator()
-        {
-            return new MyListEnumertor();
-        }
+        /*
+                // We need to provide implementation of GetEnumerator() method of IEnumerable interface
+                public IEnumerator GetEnumerator()
+                {
+                    return new MyListEnumertor();
+                }
+        */
+        // C# 6 introduced expression-bodies members for member functions, and read-only properties
+        public IEnumerator GetEnumerator() => new MyListEnumertor();
+
+        /*
+                // We can also 
+                public IEnumerator GetEnumerator()
+                {
+                    foreach (var item in _objects)
+                    {
+                        yield return item;
+                    }
+                }
+        */
 
         /*
          To implement IEnumerable/IEnumerable<T>, you must provide an enumerator.
@@ -58,10 +68,16 @@ namespace IEnumerable_and_IEnumerator
             // Current property return current Object
             public object Current
             {
-                get
-                {
-                    return _objects[_currentIndex];
-                }
+                /*                get
+                                {
+                                    return _objects[_currentIndex];
+                                }*/
+
+                // C# 6 introduced expression-bodied members for member functions, and read-only properties. 
+                // C# 7.0 expands the allowed members that can be implemented as expressions. 
+                // In C# 7.0, you can implement constructors, finalizers, and get and set accessors on properties and indexers
+                // So we can write above getter properties as
+                get => _objects[_currentIndex];
             }
 
             // MoveNext pointer move the pointer to next item
